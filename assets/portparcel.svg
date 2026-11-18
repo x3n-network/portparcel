@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">PortParcel</title>
+  <rect x="2" y="2" width="92" height="92" rx="22" fill="#14243A" stroke="#344A64" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 36 47 23 72 36v10M23 36v27l24 13 13-7M23 36l24 13 25-13M47 49v27M35 30l25 13" stroke="#F1F5F9" stroke-width="3.5"/>
+    <path d="M57 58h23m-8-8 8 8-8 8" stroke="#67DDC6" stroke-width="4"/>
+  </g>
+</svg>

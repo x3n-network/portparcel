@@ -1,0 +1,36 @@
+{
+  "connections": {
+    "staging": {
+      "protocol": "sftp",
+      "host": "sftp.example.com",
+      "port": 22,
+      "username": "deploy",
+      "key_filename": "~/.ssh/id_ed25519",
+      "known_hosts": "~/.ssh/known_hosts",
+      "remote_root": "/srv/staging",
+      "local_root": "/absolute/path/to/your/project",
+      "read_only": true,
+      "timeout": 30,
+      "max_bytes": 104857600
+    },
+    "ftps-example": {
+      "protocol": "ftps",
+      "host": "ftp.example.com",
+      "username": "deploy",
+      "password_env": "STAGING_FTPS_PASSWORD",
+      "remote_root": "/public_html",
+      "local_root": "/absolute/path/to/your/project",
+      "read_only": true
+    },
+    "legacy-ftp-example": {
+      "protocol": "ftp",
+      "host": "ftp.example.com",
+      "username": "deploy",
+      "password_env": "LEGACY_FTP_PASSWORD",
+      "allow_insecure_ftp": true,
+      "remote_root": "/public_html",
+      "local_root": "/absolute/path/to/your/project",
+      "read_only": true
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "portparcel"
+version = "0.1.0"
+description = "Agent-first file transfers over SFTP, FTPS, and FTP via JSON CLI and MCP"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "X3N LLC" }]
+requires-python = ">=3.11"
+dependencies = ["paramiko>=3.5,<5", "mcp>=1.12,<2"]
+
+[project.urls]
+Homepage = "https://x3n.network"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pyftpdlib>=2", "pyopenssl>=25", "asyncssh>=2.20", "ruff>=0.12"]
+
+[project.scripts]
+portparcel = "portparcel.cli:main"
+portparcel-mcp = "portparcel.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "README.md", "CHANGELOG.md", "SECURITY.md", "connections.example.json",
+    "pyproject.toml", "uv.lock", "assets/portparcel.svg",
+    "src/portparcel", "tests",
+]
+exclude = ["**/__pycache__", "**/*.pyc"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/portparcel"]

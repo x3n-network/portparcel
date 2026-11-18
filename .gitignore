@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+.env
+.env.*
+connections.json
+connections.local.json
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
